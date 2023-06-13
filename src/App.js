@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       {
-        users.map(user => <LoadUsers key={user.id} name={user.name}></LoadUsers>)
+        users.map(user => <LoadUsers key={user.id} name={user.name} email = {user.email}></LoadUsers>)
       }
     </div>
   );
@@ -25,6 +25,7 @@ function LoadUsers(props){
   return(
     <div className='userCard'>
       <h2>Name of Users: {props.name}</h2>
+      <p>Email: {props.email}</p>
     </div>
   )
 }
